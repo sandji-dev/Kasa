@@ -11,7 +11,7 @@ import Error404 from "./pages/Error404/Error404.jsx";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Header />
 
       <main className="container">
@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/logement/:id" element={<Logement />} />
         
-          <Route path="/Error" element={<Error404 />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </main>
 
