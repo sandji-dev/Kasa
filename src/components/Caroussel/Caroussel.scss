@@ -1,0 +1,69 @@
+
+.carousel-wrapper {
+    width: 100%;
+    padding: 0 40px; // desktop
+    margin: 20px 0;
+}
+
+  /* CAROUSEL = référence flèches */
+.carousel {
+    position: relative;
+    width: 100%;
+    // max-width: 1240px;
+    margin: 0 auto;
+    height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: white;
+        font-size: 6rem;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .carousel-arrow-left {
+        left: 20px;
+    }
+
+    .carousel-arrow-right {
+        right: 20px;
+    }
+
+    .carousel-counter {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 14px;
+    }
+}
+
+  /* MOBILE */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        padding: 0 20px;
+    }
+
+    .carousel {
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    .carousel-arrow {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,30 @@
+
+.displayGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    background-color: #f6f6f6;
+    padding: 50px;
+    border-radius: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}  
+
+  /* Responsive */
+@media (max-width: 1024px) {
+    .displayGallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .displayGallery {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        background-color: transparent;
+        gap: 20px;
+        margin-bottom: auto;
+    }
+}

@@ -1,0 +1,30 @@
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;            
+    margin-top: 10px;
+}
+
+.tag {
+    background-color: #ff6060;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: default;
+    transition: transform 0.2s, background-color 0.2s;
+
+    &:hover {
+      background-color: #ff4c4c; 
+      transform: scale(1.05);     
+    }
+}
+
+  // Pour mobile 
+@media screen and (max-width: 480px) {
+    .tag {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+}

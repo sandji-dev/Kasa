@@ -1,0 +1,49 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+  
+  .about-collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
+    /*  UNIQUEMENT les collapses de About */
+    .collapse {
+      max-width: 1024px;
+      margin: 0 auto;
+  
+      .collapse-header {
+        padding: 12px 20px;
+  
+        h2 {
+          font-size: 20px;
+        }
+      }
+  
+      .collapse-content {
+        font-size: 16px;
+        padding: 20px;
+      }
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .about-collapses {
+      gap: 20px;
+  
+      .collapse {
+        .collapse-header h2 {
+          font-size: 16px;
+        }
+  
+        .collapse-content {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  

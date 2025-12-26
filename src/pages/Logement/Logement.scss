@@ -1,0 +1,89 @@
+/* WRAPPER GLOBAL */
+.logement-wrapper {
+  width: 100%;
+  padding: 0 40px;
+}
+
+/* CONTENU CENTRAL  */
+.logement {
+  // max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/*  HEADER (titre / host / rating)  */
+.logement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h1 {
+    color: #ff6060;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .host-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+}
+
+/* COLLAPSES */
+.logement-collapses {
+  display: flex;
+  gap: 40px;
+
+  .collapse {
+    flex: 1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logement-wrapper {
+    padding: 0 20px;
+  }
+
+  .logement-header {
+    flex-direction: column;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .host-rating {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+    .rating {
+      order: 1; // ⭐ à gauche
+    }
+
+    .host {
+      order: 2; // 👤 à droite
+    }
+  }
+
+  .logement-collapses {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
