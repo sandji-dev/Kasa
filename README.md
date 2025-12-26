@@ -1,16 +1,24 @@
-# React + Vite
+# Projet 5 - Kasa 🏠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application de location immobilière développée avec **React** et **Vite**.
 
-Currently, two official plugins are available:
+## 🚀 Lien du site
+[Voir le site en ligne](https://sandji-dev.github.io/Kasa/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies utilisées
+- **React 19** : Bibliothèque JavaScript pour l'interface.
+- **React Router 7** : Gestion de la navigation (Singe Page Application).
+- **Sass** : Préprocesseur CSS pour un style structuré.
+- **Vite** : Outil de build ultra-rapide.
 
-## React Compiler
+## ⚙️ Installation locale
+1. Cloner le projet :
+   `git clone https://github.com/sandji-dev/Kasa.git`
+2. Installer les dépendances :
+   `npm install`
+3. Lancer le projet :
+   `npm run dev`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Déploiement
+Le projet est configuré pour être déployé automatiquement sur GitHub Pages via la commande :
+`npm run deploy`
