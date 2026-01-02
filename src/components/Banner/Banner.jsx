@@ -2,14 +2,14 @@ import React from "react"
 import "./Banner.scss"
 import bannerImage from "../../assets/images/homeBanner.png"
 
-
-function Banner() {
+export default function Banner() {
     return (
-        <div className="banner">
-            <img src={bannerImage} alt="banniere" className="banner-img" />
-            <h1 className="banner-text">Chez vous partout et ailleurs</h1>
-
-        </div>
-    )
+        <section className="container">
+            <div className="banner">
+                <img src={bannerImage} alt="Paysage" />
+                <div className="banner-overlay"></div>
+                <h1>Chez vous, partout et ailleurs</h1>
+            </div>
+        </section>
+    );
 }
-export default Banner

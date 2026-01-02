@@ -1,49 +1,65 @@
 .about {
+  /* Utilise ton container pour l'alignement vertical avec le header */
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-collapses {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding-bottom: 50px;
-  }
-  
-  .about-collapses {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  
-    /*  UNIQUEMENT les collapses de About */
-    .collapse {
-      max-width: 1024px;
-      margin: 0 auto;
-  
-      .collapse-header {
-        padding: 12px 20px;
-  
+    margin-top: 30px;
+
+.collapse {
+      /* Important : Sur À Propos, les collapses sont plus larges (1024px) */
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+
+    &-header {
+            height: 52px; // Taille souvent constatée sur Figma pour À Propos
+            padding: 0 15px;
+            border-radius: 5px;
+
         h2 {
-          font-size: 20px;
+            font-size: 24px; // Vérifie si c'est 24px ou 18px sur ton Figma
+            font-weight: 500;
         }
-      }
-  
-      .collapse-content {
-        font-size: 16px;
-        padding: 20px;
-      }
     }
-  }
-  
-  /* Mobile */
-  @media (max-width: 768px) {
+
+    &-content {
+            background-color: #f6f6f6;
+            border-radius: 0 0 5px 5px;
+        
+          // On cible le texte à l'intérieur
+        p, li {
+            color: #ff6060; // La couleur Kasa
+            font-size: 24px; // Souvent très grand sur Desktop pour À Propos
+            line-height: 140%;
+        }
+    }
+}
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
     .about-collapses {
-      gap: 20px;
-  
-      .collapse {
-        .collapse-header h2 {
-          font-size: 16px;
+        gap: 20px;
+        margin-top: 10px;
+
+    .collapse {
+        &-header {
+            height: 30px; // Plus petit sur mobile
+            h2 {
+                font-size: 13px;
+            }
         }
-  
-        .collapse-content {
-          font-size: 14px;
+        &-content p, &-content li {
+            font-size: 12px;
         }
-      }
     }
-  }
-  
+    }
+}

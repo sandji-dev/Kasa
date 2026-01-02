@@ -5,7 +5,8 @@ import  './AboutBanner.scss'
 function AboutBanner () {
     return(
         <div className="about-banner">
-            <img src={aboutBanner} alt="HomeBanner" />
+            <img src={aboutBanner} alt="Paysage montagne" />
+            <div className="about-banner-overlay"></div>
         </div>
     )
 }

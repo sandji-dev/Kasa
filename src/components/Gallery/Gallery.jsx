@@ -6,16 +6,18 @@ import "./Gallery.scss"
 
 function Gallery ({logements}) {
     return (
-        <div className="displayGallery">
-            {logements.map((logement) => (
-            <Card 
-                key={logement.id}
-                id={logement.id}
-                title={logement.title}
-                cover={logement.cover}
-            />
-            ))}
-        </div>
+        <section className="container">
+            <div className="displayGallery">
+                {logements.map((logement) => (
+                <Card 
+                    key={logement.id}
+                    id={logement.id}
+                    title={logement.title}
+                    cover={logement.cover}
+                />
+                ))}
+            </div>
+        </section>    
     );
 }
 export default Gallery

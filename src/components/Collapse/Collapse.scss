@@ -1,66 +1,57 @@
 .collapse {
-    width: 100%;
-    // max-width: 1024px;
-    margin: 20px auto;
-    border-radius: 10px;
-    overflow: hidden;
-  
-    &-header {
-      background-color: #ff6060;
-      color: white;
-      padding: 10px 15px;
-      cursor: pointer;
-  
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  
-      border-radius: 10px;
-  
-      h2 {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0;
-      }
-    }
-  
-    &-arrow {
-      font-size: 24px;
-      transition: transform 0.3s ease;
-    }
-  
-    &-arrow.open {
-      transform: rotate(180deg);
-    }
-  
-    &-content {
-      background-color: #f6f6f6;
-      color: #ff6060;
-      padding: 15px;
-      font-size: 16px;
-  
-      border-radius: 0 0 10px 10px;
-  
-      p {
-        margin: 0;
-        line-height: 1.6;
-      }
-  
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-  
-        li {
-          margin-bottom: 5px;
-        }
-      }
-    }
+  width: 100%;
+  margin: 0;
+  border-radius: 5px;
+
+  &-header {
+    background-color: #ff6060;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2; // Reste au dessus du contenu
     
-    &.open {
-      .collapse-header {
-        border-radius: 10px 10px 0 0;
-      }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
     }
   }
-  
+
+  &-arrow {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  &-arrow.open {
+    transform: rotate(180deg);
+  }
+
+  &-content {
+    background-color: #f6f6f6;
+    color: #ff6060;
+    border-radius: 0 0 5px 5px;
+    margin-top: -5px; // Pour "souder" au header
+    
+    /* Animation fluide */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+    
+    .collapse-text {
+      padding: 15px; // Le padding est à l'intérieur pour ne pas casser l'animation
+    }
+  }
+
+  &.open {
+    .collapse-content {
+      max-height: 800px; // Valeur haute pour s'adapter au texte long
+    }
+  }
+}

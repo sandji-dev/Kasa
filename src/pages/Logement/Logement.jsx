@@ -9,39 +9,36 @@ import Caroussel from "../../components/Caroussel/Caroussel";
 import Collapse from "../../components/Collapse/Collapse";
 
 
-function Logement() {
-        const { id } = useParams();
-        const logement = logements.find((l) => l.id === id);
-
-        if (!logement) {
-            return <Navigate to="/Error" replace />;
-        }
-
+export default function Logement() {
+    const { id } = useParams();
+    const logement = logements.find((l) => l.id === id);
+  
+    if (!logement) return <Navigate to="/Error404" replace />;
+  
     return (
-        <div className="logement-wrapper">
-            <div className="logement">
-                <Caroussel pictures={logement.pictures} />
-    
-                <div className="logement-header">
-                    <div>
-                        <h1>{logement.title}</h1>
-                        <p>{logement.location}</p>
-                        <Tags tags={logement.tags} />
-                    </div>
-    
-                    <div className="host-rating">
-                        <Host host={logement.host} />
-                        <Rating rating={logement.rating} />
-                    </div>
-                </div>
-                <div className="logement-collapses">
-                    <Collapse title="Description" content={logement.description} />
-                    <Collapse title="Équipements" content={logement.equipments} />
-                </div>
+      <main className="container">
+        <div className="logement">
+          <Caroussel pictures={logement.pictures} />
+  
+          <div className="logement-header">
+            <div>
+              <h1>{logement.title}</h1>
+              <p>{logement.location}</p>
+              <Tags tags={logement.tags} />
             </div>
-        </div>     
-);
-
-}
-
-export default Logement;
+  
+            <div className="host-rating">
+              <Host host={logement.host} />
+              <Rating rating={logement.rating} />
+            </div>
+          </div>
+  
+          <div className="logement-collapses">
+            <Collapse title="Description" content={logement.description} />
+            <Collapse title="Équipements" content={logement.equipments} />
+          </div>
+        </div>
+      </main>
+    );
+  }
+  

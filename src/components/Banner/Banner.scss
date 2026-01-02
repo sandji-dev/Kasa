@@ -1,62 +1,65 @@
+
+.container {
+  max-width: 1240px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .banner {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 300px;
+  height: 223px;
+  margin: 30px 0;
+  border-radius: 25px;
   overflow: hidden;
-  border-radius: 35px;
-  margin: 20px auto;
-} 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-  .banner-img {
-    border-radius: 35px;
-    padding: 20px;
+  img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;         
-    
-    
-}
+    z-index: 1;
+    display: block;
+  }
 
-  .banner-text {
+  &-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 2;
+  }
+
+  h1 {
+    position: relative; 
+    z-index: 3;
     color: white;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 48px;
+    font-weight: 700;
     text-align: center;
+    margin: 0;
     padding: 0 20px;
-    opacity: 0;
-    animation: fadeInText 1.5s ease forwards;
-}
-
-
-@keyframes fadeInText {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
+    width: 100%;
   }
 }
+
+/* 📱 RESPONSIVE */
 
 @media (max-width: 768px) {
   .banner {
-    max-width: 100%;    
-    height: 180px;          
-    margin: 20px 10px;      
-    border-radius: 20px;
-  }
+    height: 111px;
+    border-radius: 10px;
+    justify-content: flex-start; // Aligné à gauche sur mobile
 
-  .banner-text {
-    font-size: 1.2rem;    
-    max-width: 90%;        
+    h1 {
+      font-size: 24px;
+      text-align: left;
+      padding-left: 16px;
+      padding-right: 60px; // Pour forcer le retour à la ligne
+    }
   }
 }
-

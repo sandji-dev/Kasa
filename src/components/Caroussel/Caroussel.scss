@@ -1,69 +1,66 @@
-
 .carousel-wrapper {
-    width: 100%;
-    padding: 0 40px; // desktop
-    margin: 20px 0;
+  max-width: 1240px; 
+  margin: 20px auto; 
+  width: 100%;
 }
 
-  /* CAROUSEL = référence flèches */
 .carousel {
-    position: relative;
-    width: 100%;
-    // max-width: 1240px;
-    margin: 0 auto;
-    height: 415px;
-    border-radius: 25px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 80px; 
+    cursor: pointer;
+    z-index: 10;
+    padding: 0 20px;
+    
+    &:active {
+        transform: translateY(-50%) scale(0.9); // Petit effet au clic
     }
+  }
+
+  .carousel-arrow-left { left: 0; }
+  .carousel-arrow-right { right: 0; }
+
+  .carousel-counter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .carousel {
+    height: 255px;
+    border-radius: 10px;
 
     .carousel-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        color: white;
-        font-size: 6rem;
-        cursor: pointer;
-        z-index: 10;
-    }
-
-    .carousel-arrow-left {
-        left: 20px;
-    }
-
-    .carousel-arrow-right {
-        right: 20px;
+      font-size: 30px;
+      padding: 0 10px;
     }
 
     .carousel-counter {
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 14px;
+      display: none; 
     }
-}
-
-  /* MOBILE */
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        padding: 0 20px;
-    }
-
-    .carousel {
-        height: 255px;
-        border-radius: 10px;
-    }
-
-    .carousel-arrow {
-        font-size: 2.5rem;
-    }
+  }
 }

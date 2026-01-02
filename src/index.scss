@@ -1,6 +1,5 @@
 * {
-  margin: 0;
-  padding: 0;
+  
   box-sizing: border-box;
 }
 
@@ -9,11 +8,17 @@ body {
   background-color: #fff;
   color: #000;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 
 }
+
 .container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1240px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px; /* Cet espace doit être identique pour le header, la banner, et le footer */
+  width: 100%;
+  box-sizing: border-box; /* Très important pour que le padding ne s'ajoute pas à la largeur */
 }
 

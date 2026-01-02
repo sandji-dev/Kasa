@@ -6,32 +6,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+    padding: 60px 0 30px; 
     text-align: center;
+    margin-top: 50px; // Pour bien le détacher du contenu
+
+    &-logo {
+        width: 122px;
+        height: auto;
+        margin-bottom: 30px; // Plus d'espace entre logo et texte
+    }
+
+    p {
+        font-size: 24px; 
+        font-weight: 500;
+        margin: 0;
+    }
 }
 
-.footer-logo {
-    width: 120px;
-    margin-bottom: 15px;
-}
-
-.footer p {
-    font-size: 14px;
-    margin: 0;
-}
-
-  /* Responsive */
-
-@media (max-width: 600px) {
+/* 📱 MOBILE */
+@media (max-width: 768px) {
     .footer {
-        padding: 20px 10px;
-    }
+        padding: 60px 20px;
+        
+        &-logo {
+            margin-bottom: 15px;
+        }
 
-    .footer-logo {
-        width: 100px;
-    }
-
-    .footer p {
-        font-size: 12px;
+        p {
+            font-size: 14px;
+            width: 133px;
+            line-height: 1.2;
+        }
     }
 }

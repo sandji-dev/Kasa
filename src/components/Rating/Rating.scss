@@ -1,11 +1,28 @@
 .rating {
     display: flex;
-    gap: 5px;
+    gap: 10px;
+
+    .star {
+        width: 24px;
+        height: 24px;
+
+    &.filled {
+        fill: #ff6060;
+    }
+
+    &.empty {
+        fill: #e3e3e3; // Gris étoiles vides
+    }
+    }
 }
-.star {
-    font-size: 1.5rem;
-    color: #e3e3e3; 
-}
-.star.filled {
-    color: #ff6060;
+
+  /* 📱 MOBILE */
+@media (max-width: 768px) {
+    .rating {
+        gap: 5px;
+        .star {
+        width: 15px;
+        height: 15px;
+    }
+    }
 }

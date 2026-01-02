@@ -1,35 +1,34 @@
 import { useState } from "react";
-import './Collapse.scss'
+import "./Collapse.scss";
 
-function Collapse({ title, content }) {
+export default function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleCollapse = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleCollapse = () => setIsOpen(prev => !prev);
 
     return (
-        <div className="collapse">
+        <div className={`collapse ${isOpen ? "open" : ""}`}>
             <div className="collapse-header" onClick={toggleCollapse}>
                 <h2>{title}</h2>
-                <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>⌃</span>
+                <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>
+                    ⌃
+                </span>
             </div>
 
-        {isOpen && (
+            {/* Suppression du {isOpen && ...} pour permettre l'animation CSS */}
             <div className="collapse-content">
-            {Array.isArray(content) ? (
-            <ul>
-            {content.map((item, index) => (
-                <li key={index}>{item}</li>
-            ))}
-            </ul>
-        ) : (
-            <p>{content}</p>
-        )}
+                <div className="collapse-text"> 
+                    {Array.isArray(content) ? (
+                        <ul>
+                            {content.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>{content}</p>
+                    )}
+                </div>
+            </div>
         </div>
-    )}
-    </div>
-);
+    );
 }
-
-export default Collapse;

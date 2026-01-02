@@ -14,6 +14,7 @@
     transition: transform 0.3s ease;
   }
 
+  /* Dégradé noir bas */
   &::after {
     content: "";
     position: absolute;
@@ -30,11 +31,12 @@
     bottom: 20px;
     left: 20px;
     right: 20px;
+
     z-index: 1;
     color: white;
     font-size: 18px;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.3;
   }
 
   &:hover img {
@@ -42,6 +44,6 @@
   }
 
   @media (max-width: 768px) {
-    height: 250px;
+    height: 255px;
   }
 }
