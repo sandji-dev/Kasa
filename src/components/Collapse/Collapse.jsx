@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Collapse.scss";
+import arrowIcon from "../../assets/Vector.png"
 
 export default function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,11 @@ export default function Collapse({ title, content }) {
         <div className={`collapse ${isOpen ? "open" : ""}`}>
             <div className="collapse-header" onClick={toggleCollapse}>
                 <h2>{title}</h2>
-                <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>
-                    ⌃
-                </span>
+                <img 
+                    src={arrowIcon} 
+                    alt="flèche" 
+                    className={`collapse-arrow ${isOpen ? "open" : ""}`} 
+                />
             </div>
 
             {/* Suppression du {isOpen && ...} pour permettre l'animation CSS */}

@@ -23,7 +23,7 @@ export default function Logement() {
           <div className="logement-header">
             <div>
               <h1>{logement.title}</h1>
-              <p>{logement.location}</p>
+              <p className="logement-location">{logement.location}</p>
               <Tags tags={logement.tags} />
             </div>
   

@@ -22,12 +22,12 @@
 
     a {
         font-size: 18px;
-        color: #ff6060;
+        color: #000000;
         text-decoration: underline;
         margin-bottom: 50px;
         
         &:hover {
-            font-weight: 600; // Petit plus pour l'UX
+            font-weight: 500; // Petit plus pour l'UX
         }
     }
 
